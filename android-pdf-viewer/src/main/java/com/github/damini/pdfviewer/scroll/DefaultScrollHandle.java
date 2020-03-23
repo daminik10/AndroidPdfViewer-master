@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.github.barteksc.pdfviewer.PDFView;
 
-import com.github.barteksc.pdfviewer.util.Util;
+import com.github.damini.pdfviewer.PDFView;
 import com.github.damini.pdfviewer.R;
+import com.github.damini.pdfviewer.util.Util;
 
 
 public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle {

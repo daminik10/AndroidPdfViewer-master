@@ -19,14 +19,16 @@ package com.github.damini.pdfviewer.source;
 import android.content.Context;
 import android.os.ParcelFileDescriptor;
 
-import com.github.barteksc.pdfviewer.util.FileUtils;
+
+import com.github.damini.pdfviewer.util.FileUtils;
 import com.shockwave.pdfium.PdfDocument;
 import com.shockwave.pdfium.PdfiumCore;
 
 import java.io.File;
 import java.io.IOException;
 
-public class AssetSource implements com.github.barteksc.pdfviewer.source.DocumentSource {
+
+public class AssetSource implements DocumentSource {
 
     private final String assetName;
 

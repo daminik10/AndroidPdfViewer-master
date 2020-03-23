@@ -29,12 +29,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
-import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
-import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
-import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
-import com.github.barteksc.pdfviewer.util.FitPolicy;
+
+import com.github.damini.pdfviewer.PDFView;
+import com.github.damini.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.damini.pdfviewer.listener.OnPageChangeListener;
+import com.github.damini.pdfviewer.listener.OnPageErrorListener;
+import com.github.damini.pdfviewer.scroll.DefaultScrollHandle;
+import com.github.damini.pdfviewer.util.FitPolicy;
 import com.shockwave.pdfium.PdfDocument;
 
 import org.androidannotations.annotations.AfterViews;
@@ -46,7 +47,6 @@ import org.androidannotations.annotations.OptionsMenu;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.List;
-
 @EActivity(R.layout.activity_main)
 @OptionsMenu(R.menu.options)
 public class PDFViewActivity extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener,
@@ -119,7 +119,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
                 .onPageChange(this)
                 .enableAnnotationRendering(true)
                 .onLoad(this)
-                .scrollHandle((com.github.barteksc.pdfviewer.scroll.ScrollHandle) new DefaultScrollHandle(this))
+                .scrollHandle(new DefaultScrollHandle(this))
                 .spacing(10) // in dp
                 .onPageError(this)
                 .pageFitPolicy(FitPolicy.BOTH)
@@ -134,7 +134,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
                 .onPageChange(this)
                 .enableAnnotationRendering(true)
                 .onLoad(this)
-                .scrollHandle((com.github.barteksc.pdfviewer.scroll.ScrollHandle) new DefaultScrollHandle(this))
+                .scrollHandle(new DefaultScrollHandle(this))
                 .spacing(10) // in dp
                 .onPageError(this)
                 .load();

@@ -17,8 +17,7 @@ package com.github.damini.pdfviewer.source;
 
 import android.content.Context;
 
-import com.github.barteksc.pdfviewer.util.Util;
-import com.github.damini.pdfviewer.source.DocumentSource;
+import com.github.damini.pdfviewer.util.Util;
 import com.shockwave.pdfium.PdfDocument;
 import com.shockwave.pdfium.PdfiumCore;
 
